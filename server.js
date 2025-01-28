@@ -43,10 +43,10 @@ app.use("/api/messages", messageRoutes);
 app.use("/api/category", categoryRoutes);
 
 
-//app.use(express.static(path.join(_dirname, '/Client/dist')));
-// app.get('*', (_, res) => {
-//   res.sendFile(path.join(_dirname, "Client","dist","index.html"));
-// })
+app.use(express.static(path.join(_dirname, '/Client/dist')));
+app.get('*', (_, res) => {
+  res.sendFile(path.join(_dirname, "Client","dist","index.html"));
+})
 
 // Start the server
 server.listen(PORT, () => {
