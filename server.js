@@ -30,7 +30,7 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "https://auction-bidding-system.onrender.com",
   credentials: true,
 }));
 
