@@ -73,7 +73,7 @@ function App() {
   
   const { products } = useSelector((state) => state.product);
   
-  const verifiedProducts = products.filter(product =>
+  const verifiedProducts = products?.filter(product =>
     product.isSoldout === false &&
     product.isVerify === true
   );
