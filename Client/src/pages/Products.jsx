@@ -19,7 +19,7 @@ const Products = ({ products }) => {
   
   const categories = [
     "all",
-    ...new Set(products.map((product) => product?.category)),
+    ...new Set(products?.map((product) => product?.category)),
   ];
 
   // Filter products by search query and selected category
